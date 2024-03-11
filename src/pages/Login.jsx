@@ -42,12 +42,12 @@ const Login = () => {
         setCredentials({name:'',email:'',password:'',confirmPassword:''})
 
 
-        navigate('/')
+        navigate('/create')
     }
 
     useEffect(()=>{
         if(Cookies.get('authToken')){
-            navigate('/');
+            navigate('/create');
         }
     },[])
 
