@@ -7,7 +7,7 @@ const ViewItems = () => {
   const role = user.role;
 
   const host = 'https://food-backend-rqn3.onrender.com'
-  const frontendHost = 'http://localhost:3000'
+  const frontendHost = 'https://spontaneous-cascaron-71c559.netlify.app/'
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showCheckpoints, setShowCheckpoints] = useState(false);
