@@ -19,7 +19,7 @@ function App() {
         {/* Navbar is rendered conditionally */}
         <Routes>
           {/* Public routes without Navbar */}
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           
           {/* Routes with Navbar */}
@@ -29,7 +29,7 @@ function App() {
               <>
                 <Navbar show={show} setShow={setShow}/>
                 <Routes>
-                  <Route path="/" element={<CreateItem show={show} setShow={setShow}/>} />
+                  <Route path="/create" element={<CreateItem show={show} setShow={setShow}/>} />
                   <Route path="/view" element={<ViewItems show={show} setShow={setShow}/>} />
                   <Route path="/view-item/:itemId" element={<ViewItemSingle show={show} setShow={setShow}/>} />
                   
