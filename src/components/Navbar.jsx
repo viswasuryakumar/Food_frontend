@@ -6,7 +6,7 @@ const Navbar = () => {
 
   useEffect(()=>{
     if(!Cookies.get('authToken')){
-      navigate("/login")
+      navigate("/")
     }
   },[])
 
@@ -15,7 +15,7 @@ const Navbar = () => {
   const logout=()=>{
     localStorage.removeItem('user');
     Cookies.remove('authToken');
-    navigate("/login");
+    navigate("/");
   }
 
   return (
@@ -24,7 +24,7 @@ const Navbar = () => {
           Food Tracker
         </div>
         <div className='flex gap-x-6'>
-            <Link to="/">Create Item</Link>
+            <Link to="/create">Create Item</Link>
             <Link to="/view">View Items</Link>
            
             <span className='cursor-pointer' onClick={logout}>Logout</span>
